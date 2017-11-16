@@ -1,0 +1,40 @@
+#cardContainer{
+	height: 100vh;
+	width: 100vw;
+	background-color: lavender;
+	perspective: 1000px;
+	font-size: 0;
+	background-size: cover;
+	background-position: center;
+}
+.card{
+	height: 33%;
+	width: 16.6%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition-duration: .5s;
+	display: inline-block;
+	font-size: 1rem;
+}
+.front, .back{
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	margin: 0 auto;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	backface-visibility: hidden;
+}
+.back{
+	transform: translate(-50%,-50%) rotate3d(0,1,0,0deg);
+}
+.front{
+	transform: translate(-50%,-50%) rotate3d(0,1,0,180deg);
+}
+.flipped {
+	transform: rotate3d(0,1,0,180deg);
+}
